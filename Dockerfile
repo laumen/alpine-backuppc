@@ -6,4 +6,4 @@ RUN mkdir -p /var/log/cron && mkdir -m 0644 -p /var/spool/cron/crontabs && touch
 
 COPY /docker-cmd.sh /
 
-CMD ["/docker-cmd.sh"]
+#CMD ["/docker-cmd.sh"]
