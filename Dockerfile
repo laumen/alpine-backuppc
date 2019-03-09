@@ -2,6 +2,8 @@ FROM adferrand/backuppc
 
 RUN apk update && apk --no-cache add samba dcron && rm -rf /var/cache/apk/*
 
+CMD ["crond", "-f"]
+
 #RUN apk update && apk --no-cache add samba dcron && rm -rf /var/cache/apk/*
 
 #RUN mkdir -p /var/log/cron && mkdir -m 0644 -p /var/spool/cron/crontabs && touch /var/log/cron/cron.log && mkdir -m 0644 -p /etc/cron.d
