@@ -1,6 +1,6 @@
 FROM adferrand/backuppc
 
-RUN apk update
+RUN apk update && apk --no-cache add samba dcron && rm -rf /var/cache/apk/*
 
 #RUN apk update && apk --no-cache add samba dcron && rm -rf /var/cache/apk/*
 
