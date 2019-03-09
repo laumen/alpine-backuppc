@@ -8,4 +8,5 @@ COPY /docker-entry.sh /docker-entry.sh
 COPY /docker-cmd.sh /docker-cmd.sh
 
 ENTRYPOINT ["/docker-entry.sh"]
-CMD ["/docker-cmd.sh"]
+#CMD ["/docker-cmd.sh"]
+CMD ["crond", "-s", "/var/spool/cron/crontabs", "-f", "-L", "/var/log/cron/cron.log", "$@"]
