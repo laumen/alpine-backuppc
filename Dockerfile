@@ -11,4 +11,4 @@ RUN apk update && apk --no-cache add samba dcron && rm -rf /var/cache/apk/*
 #CMD ["/docker-cmd.sh"]
 #CMD ["crond", "-s", "/var/spool/cron/crontabs", "-f", "-L", "/var/log/cron/cron.log", "$@"]
 
-CMD ["crond", "-f"]
+#CMD ["crond", "-f"]
