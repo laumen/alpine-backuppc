@@ -7,6 +7,6 @@ RUN mkdir -p /var/log/cron && mkdir -m 0644 -p /var/spool/cron/crontabs && touch
 COPY /docker-entry.sh /docker-entry.sh
 COPY /docker-cmd.sh /docker-cmd.sh
 
-ENTRYPOINT ["/docker-entry.sh"]
+#ENTRYPOINT ["/docker-entry.sh"]
 #CMD ["/docker-cmd.sh"]
 CMD ["crond", "-s", "/var/spool/cron/crontabs", "-f", "-L", "/var/log/cron/cron.log", "$@"]
