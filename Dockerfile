@@ -2,7 +2,7 @@ FROM adferrand/backuppc
 
 RUN apk update && apk --no-cache add samba dcron && rm -rf /var/cache/apk/*
 
-CMD ["crond", "-f"]
+CMD ["crond"]
 
 #RUN apk update && apk --no-cache add samba dcron && rm -rf /var/cache/apk/*
 
